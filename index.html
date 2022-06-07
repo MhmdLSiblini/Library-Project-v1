@@ -9,9 +9,10 @@
     <link rel="icon" type="png" href="images/icon.png">
     <title>THC Library</title>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
-<body>
+<body class="loading" id="remove">
 
     <!-- Tester -->
     <!-- <div class="content">
@@ -23,14 +24,11 @@
 
     <div class="loader">
         <div class="container__preloader">
-            <div>
-                <h1 class="load-text">Preparing </h1>
-            </div>
             <div class="align-img">
                 <img class="loader__img" src="images/loader.gif" alt="">
             </div>
             <div class="align-text">
-                <h1 class="load-text">Your Library!</h1>
+                <h1 class="load-text">Preparing <br> Your Library!</h1>
             </div>
         </div>
     </div>
@@ -41,11 +39,31 @@
         <nav>
             <div class="nav__container">
                 <img class="logo" src="images/logo.png" alt="">
-                <ul>
+                <ul class="nav__links">
                     <li><a href="#" class="nav__link">Home</a></li>
-                    <li><a href="#" class="nav__link">Contact</a></li>
-                    <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
+                    <li><a class="nav__link no-cursor">Contact</a></li>
+                    <li><a href="#features" class="nav__link nav__link--primary">Books</a></li>
                 </ul>
+
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
+                        </li>
+                        <li class="menu__list">
+                            <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -54,7 +72,9 @@
                 <div class="header__description">
                     <h1>Lebanon's most awarded online library platform</h1>
                     <h2>Find your dream book with our <span class="purple">Library</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#features">
+                        <button class="btn">Browse Books</button>
+                    </a>
                 </div>
                 <div>
                     <figure class="header__img--wrapper">
@@ -432,14 +452,14 @@
         <section id="More">
             <div class="container">
                 <div class="row row__column">
-                        <h2>
-                            Explore more <span class="purple">Books</span>
-                        </h2>
+                    <h2>
+                        Explore more <span class="purple">Books</span>
+                    </h2>
 
-                        <a href="#features">
-                            <button class="btn">Browse Books</button>
-                        </a>
-            
+                    <a href="#features">
+                        <button class="btn">Browse Books</button>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -455,10 +475,10 @@
                 </a>
 
                 <div class="footer__list">
-                    <a href="#" class="footer__link">Home</a>
-                    <a href="" class="footer__link no-cursor">About</a>
-                    <a href="#features" class="footer__link">Books</a>
-                    <a href="" class="footer__link no-cursor">Contact</a>
+                    <a href="#" class="footer__link hover-underline-animation">Home</a>
+                    <a class="footer__link no-cursor hover-underline-animation">About</a>
+                    <a href="#features" class="footer__link hover-underline-animation">Books</a>
+                    <a class="footer__link no-cursor hover-underline-animation">Contact</a>
                 </div>
 
                 <div class="footer__copyright">Copyright &copy;2022 THC Library</div>
